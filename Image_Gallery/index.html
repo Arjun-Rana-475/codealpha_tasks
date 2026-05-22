@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Image Gallery</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <h1>Modern Image Gallery</h1>
+
+    <div class="filter-buttons">
+
+        <button onclick="filterImages('all')">All</button>
+
+        <button onclick="filterImages('fruit')">Aura Farming</button>
+
+        <button onclick="filterImages('nature')">Spidy</button>
+
+        <button onclick="filterImages('city')">Coders shit</button>
+
+    </div>
+
+    <div class="gallery">
+
+        <img src="images/img1.jpg"
+             class="gallery-item fruit"
+             onclick="openLightbox(0)">
+
+        <img src="images/img2.jpg"
+             class="gallery-item nature"
+             onclick="openLightbox(1)">
+
+        <img src="images/img3.jpg"
+             class="gallery-item city"
+             onclick="openLightbox(2)">
+
+        <img src="images/img4.jpg"
+             class="gallery-item fruit"
+             onclick="openLightbox(3)">
+
+    </div>
+
+    <div class="lightbox" id="lightbox">
+
+        <span class="close" onclick="closeLightbox()">×</span>
+
+        <button class="prev" onclick="changeSlide(-1)">❮</button>
+
+        <img id="lightbox-img">
+
+        <button class="next" onclick="changeSlide(1)">❯</button>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
